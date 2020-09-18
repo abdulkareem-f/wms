@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "30552e8f-a778-43f4-90b3-9ec71f14c2e6",
+		"name": "WMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Items",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzk5NmZkYzYyMTA0NDFmODdiOWRlMjg2YWZkOWNiZGFlNzlmYmJiZDg2MzUxOTZjNzQ2ZDgyOGYxNjNhYjdkN2IyOWQ1ODBjZjI1YzFmYTIiLCJpYXQiOjE2MDA0MTc0ODUsIm5iZiI6MTYwMDQxNzQ4NSwiZXhwIjoxNjMxOTUzNDg1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TNxwJw1Azpd-_YwSef3AKEFcJ2gnT9mXDossdcVfJlsSpa6nEbn_Qcqo3jXo07ugvl4jQ0MaDkp3ymTKAl-mTibnZAN7LXHQcRnkuRA8bPWzKIWcHXBaTGje3JbMewPHuQ3Zinjt6zr-dO_IAwdLR64MzRoGLYtGZvTP7AJXkT414pz2C5Wr5fxpyiKwVsmRcD5379WwxAs041cXlNMLDcaoU2xqCNnl1Rz7ixB1cdSm9nfJ6_2GsEAePC54Uf5Q6NuDL-GhrnWtamzCEE88IfU4VqyqGH_vZNNFvrSjypauN9PYBqj9lBkhJzqYgR2VjlgzpqYCM3FvTAAk1s8feWgorsyN-BSn1AC7NAL7VzrbcWYi2dH711HbR2unq4SDg734l_bCQ2nTPIkroPwZZEomkasvhVaAfe5ujY-1mLlDvtWiEJU29_-zEGAPxbh-OSW5EOM_pTZODFfeLwDsV-tDjzcjy4jV0dx6HyH7VAXgs1Zlxes7JQ4MzvKoeTGN4p1enGouldkZc-N6Ll2ubY5JEF7_CR1IsOGAh1h03VnsZNahio8v9qdxD7Khwttsw6PMxCaBT9GR4i_ie5LaL1NLEy6keV4O3HGhmw8ER7jfXNtFgC0YrjkBgMk7h67SKuihjxZTJwgdR2yuq72cLrGUQ7AjjrYUeG8iV3MPowc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/warehouse-sys/public/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"warehouse-sys",
+						"public",
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"admin@admin.com\",\r\n    \"password\"  :  \"admin_admin\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/warehouse-sys/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"warehouse-sys",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Warehouse Keeper",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"warehouse@keeper.com\",\r\n    \"password\"  :  \"warehouse_keeper\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/warehouse-sys/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"warehouse-sys",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgyMGFmZDIzYjFlNTM1NDJmNWRmZmQzMGI5ZGIxNDE0NDJmMmJjMWQ1NzQwNDA5OGJjNDdmYjg2YjZjNTRiMzVmMzQ1OTcwNzcwMmNmNDgiLCJpYXQiOjE2MDA0MTgxODksIm5iZiI6MTYwMDQxODE4OSwiZXhwIjoxNjMxOTU0MTg5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.C8e4s2kQjTUPwnF9nu4skb1PNGfzkpXf-px2xe7Qx8vu-sFaf1NtwZYwLCf4KNI7jb16FOo82MClGQYH7Inu4vzApKL3OHYau4r8DM6x4Iewayv5JO-iCsqYfqHujzWwX06ZBpt5KOjB1YTyrx2vt1qUInaJ9EukBrerDK_-PipDxWBL85X1KnSE271hfM5tCQjYHQCt_9vws1FEVjlHQb357B6kbhbBGqBvBCO96O-8vfdxSfeBAOXDqscBc7V9l2vm0KPXb-mJatpthr9getOZl_GI1hJPaoPcw6n1vTTC8kwt7je1NxmIJIKsLoTe2K3LopMH-cInBCbtoPwl4FbrmQhhSJTS83vsPhRfzYqNfSdCBASeWfi-Uq2MifV-dlsDQZeTE7PYWO6U9zpzAEb_rL6w16spgx_h2mf-R5YA8OQtK7trcaa6wtQ3b_1S5WW4Na0D9O1tIhHToqWYOfGHxGzpufT9T4az7sGK5ZW9btgCjvt-6Loj7U3Xr6MiwTPGo88MFTUXhyjbOgHK6Kf5lJCs6po8QFRcJwfR4MBUfjTHpfkER6D3B0ji31db_cXL6OYRdkJ_Lf8k33rCAJMjuRC0bl2SGRJKc5hkQzEwDJK4442FVt0UA7Xp4htryz98OjJSSjL2TpFM1CWgxacSOAN-FOFxaXnO7PUbHtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Item 1\",\r\n    \"manufacturer\" : \"manufacturer 1\",\r\n    \"quantity\"  :   10,\r\n    \"expiry_date\"  : \"2020-12-10\",\r\n    \"unit-name\" : [\"Unit 1\", \"Unit 2\"],\r\n    \"unit-buy-price\" : [900, 700],\r\n    \"unit-sell-price\" : [1000, 800]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/warehouse-sys/public/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"warehouse-sys",
+						"public",
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgyMGFmZDIzYjFlNTM1NDJmNWRmZmQzMGI5ZGIxNDE0NDJmMmJjMWQ1NzQwNDA5OGJjNDdmYjg2YjZjNTRiMzVmMzQ1OTcwNzcwMmNmNDgiLCJpYXQiOjE2MDA0MTgxODksIm5iZiI6MTYwMDQxODE4OSwiZXhwIjoxNjMxOTU0MTg5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.C8e4s2kQjTUPwnF9nu4skb1PNGfzkpXf-px2xe7Qx8vu-sFaf1NtwZYwLCf4KNI7jb16FOo82MClGQYH7Inu4vzApKL3OHYau4r8DM6x4Iewayv5JO-iCsqYfqHujzWwX06ZBpt5KOjB1YTyrx2vt1qUInaJ9EukBrerDK_-PipDxWBL85X1KnSE271hfM5tCQjYHQCt_9vws1FEVjlHQb357B6kbhbBGqBvBCO96O-8vfdxSfeBAOXDqscBc7V9l2vm0KPXb-mJatpthr9getOZl_GI1hJPaoPcw6n1vTTC8kwt7je1NxmIJIKsLoTe2K3LopMH-cInBCbtoPwl4FbrmQhhSJTS83vsPhRfzYqNfSdCBASeWfi-Uq2MifV-dlsDQZeTE7PYWO6U9zpzAEb_rL6w16spgx_h2mf-R5YA8OQtK7trcaa6wtQ3b_1S5WW4Na0D9O1tIhHToqWYOfGHxGzpufT9T4az7sGK5ZW9btgCjvt-6Loj7U3Xr6MiwTPGo88MFTUXhyjbOgHK6Kf5lJCs6po8QFRcJwfR4MBUfjTHpfkER6D3B0ji31db_cXL6OYRdkJ_Lf8k33rCAJMjuRC0bl2SGRJKc5hkQzEwDJK4442FVt0UA7Xp4htryz98OjJSSjL2TpFM1CWgxacSOAN-FOFxaXnO7PUbHtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/warehouse-sys/public/api/items/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"warehouse-sys",
+						"public",
+						"api",
+						"items",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgyMGFmZDIzYjFlNTM1NDJmNWRmZmQzMGI5ZGIxNDE0NDJmMmJjMWQ1NzQwNDA5OGJjNDdmYjg2YjZjNTRiMzVmMzQ1OTcwNzcwMmNmNDgiLCJpYXQiOjE2MDA0MTgxODksIm5iZiI6MTYwMDQxODE4OSwiZXhwIjoxNjMxOTU0MTg5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.C8e4s2kQjTUPwnF9nu4skb1PNGfzkpXf-px2xe7Qx8vu-sFaf1NtwZYwLCf4KNI7jb16FOo82MClGQYH7Inu4vzApKL3OHYau4r8DM6x4Iewayv5JO-iCsqYfqHujzWwX06ZBpt5KOjB1YTyrx2vt1qUInaJ9EukBrerDK_-PipDxWBL85X1KnSE271hfM5tCQjYHQCt_9vws1FEVjlHQb357B6kbhbBGqBvBCO96O-8vfdxSfeBAOXDqscBc7V9l2vm0KPXb-mJatpthr9getOZl_GI1hJPaoPcw6n1vTTC8kwt7je1NxmIJIKsLoTe2K3LopMH-cInBCbtoPwl4FbrmQhhSJTS83vsPhRfzYqNfSdCBASeWfi-Uq2MifV-dlsDQZeTE7PYWO6U9zpzAEb_rL6w16spgx_h2mf-R5YA8OQtK7trcaa6wtQ3b_1S5WW4Na0D9O1tIhHToqWYOfGHxGzpufT9T4az7sGK5ZW9btgCjvt-6Loj7U3Xr6MiwTPGo88MFTUXhyjbOgHK6Kf5lJCs6po8QFRcJwfR4MBUfjTHpfkER6D3B0ji31db_cXL6OYRdkJ_Lf8k33rCAJMjuRC0bl2SGRJKc5hkQzEwDJK4442FVt0UA7Xp4htryz98OjJSSjL2TpFM1CWgxacSOAN-FOFxaXnO7PUbHtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Item 5 Updated 8\",\r\n    \"manufacturer\" : \"manufacturer 1 Updated\",\r\n    \"quantity\"  :   55,\r\n    \"expiry_date\"  : \"2021-12-25\",\r\n    \"unit-name\" : [\"Unit 1 Updated\", \"Unit 2 Updated\"],\r\n    \"unit-buy-price\" : [900, 700],\r\n    \"unit-sell-price\" : [1000, 800]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/warehouse-sys/public/api/items/50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"warehouse-sys",
+						"public",
+						"api",
+						"items",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgyMGFmZDIzYjFlNTM1NDJmNWRmZmQzMGI5ZGIxNDE0NDJmMmJjMWQ1NzQwNDA5OGJjNDdmYjg2YjZjNTRiMzVmMzQ1OTcwNzcwMmNmNDgiLCJpYXQiOjE2MDA0MTgxODksIm5iZiI6MTYwMDQxODE4OSwiZXhwIjoxNjMxOTU0MTg5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.C8e4s2kQjTUPwnF9nu4skb1PNGfzkpXf-px2xe7Qx8vu-sFaf1NtwZYwLCf4KNI7jb16FOo82MClGQYH7Inu4vzApKL3OHYau4r8DM6x4Iewayv5JO-iCsqYfqHujzWwX06ZBpt5KOjB1YTyrx2vt1qUInaJ9EukBrerDK_-PipDxWBL85X1KnSE271hfM5tCQjYHQCt_9vws1FEVjlHQb357B6kbhbBGqBvBCO96O-8vfdxSfeBAOXDqscBc7V9l2vm0KPXb-mJatpthr9getOZl_GI1hJPaoPcw6n1vTTC8kwt7je1NxmIJIKsLoTe2K3LopMH-cInBCbtoPwl4FbrmQhhSJTS83vsPhRfzYqNfSdCBASeWfi-Uq2MifV-dlsDQZeTE7PYWO6U9zpzAEb_rL6w16spgx_h2mf-R5YA8OQtK7trcaa6wtQ3b_1S5WW4Na0D9O1tIhHToqWYOfGHxGzpufT9T4az7sGK5ZW9btgCjvt-6Loj7U3Xr6MiwTPGo88MFTUXhyjbOgHK6Kf5lJCs6po8QFRcJwfR4MBUfjTHpfkER6D3B0ji31db_cXL6OYRdkJ_Lf8k33rCAJMjuRC0bl2SGRJKc5hkQzEwDJK4442FVt0UA7Xp4htryz98OjJSSjL2TpFM1CWgxacSOAN-FOFxaXnO7PUbHtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/warehouse-sys/public/api/items/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"warehouse-sys",
+						"public",
+						"api",
+						"items",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

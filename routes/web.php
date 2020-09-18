@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', 'DashboardController@index')->name('dashboard');
+
+Auth::routes(['login' => true, 'logout' => true]);
+
+
+Route::resource('users', 'UserController');
+Route::post('users/datatable', [
+    'as' => 'usersDatatable.data', 'uses' => 'UserController@usersDatatable',
+]);
+
+Route::resource('items', 'itemController');
+Route::post('items/datatable', [
+    'as' => 'itemsDatatable.data', 'uses' => 'itemController@itemsDatatable',
+]);
+Route::post('items/delete-unit', 'itemController@deleteUnit');
+
+Route::get('items/{id}/edit-info', 'itemController@editInfo');
+Route::post('items/update-info', 'itemController@updateInfo');
